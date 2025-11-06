@@ -1,0 +1,38 @@
+name: main
+on:
+  push:
+    branches:
+      - master 
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get actions
+        uses: actions/checkout@v5
+        with:
+            lfs: 'true'
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: 💻 Build files
+        run: |
+          pip install -r requirements.txt
+          mkdocs build
+
+      - name: 📂 Sync files
+        uses: pressidium/lftp-mirror-action@v1
+        with:
+          host: ${{ secrets.SERVER }}
+          port: ${{ secrets.PORT }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASSWORD }}
+          localDir: './site/'
+          remoteDir: '.'
+          settings: 'sftp:auto-confirm=yes'
+          onlyNewer: true
