@@ -52,4 +52,6 @@ extra_javascript:
 plugins:
   # Host external assets locally 
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
-  # - privacy
+  - privacy
+  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+  # - optimize
