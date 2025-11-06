@@ -1,0 +1,57 @@
+site_name: Wiki
+site_url: https://wiki.digital-sovereignty.help/
+theme:
+  name: material
+  font: false # Prevents fonts being loaded from Google Fonts
+  language: de
+  logo: assets/logo_full_white.svg
+  favicon: assets/favicon.png
+  palette:
+    # Automatic appearance
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+markdown_extensions:
+  # Admonitions 
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  # Math Expressions 
+  # https://squidfunk.github.io/mkdocs-material/reference/math
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  # Math Expressions 
+  # https://squidfunk.github.io/mkdocs-material/reference/math
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  # Host external assets locally 
+  # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+  - privacy
+  # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+  # - optimize
