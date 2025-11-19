@@ -1,13 +1,10 @@
-# Welcome to MkDocs
+# Der Eurokompass
+Wir sind eine Community aus Anwendern und Experten, die Unterstützung auf dem Weg zur digitalen Unabhängigkeit bieten möchten. Mehr über das Projekt erfahren Sie [hier](https://digital-sovereignty.help/).
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Auf dieser Seite finden Sie in Form von Wiki-Einträgen und Blog Posts einfache einfache Tutorials zu freien Tools, sicheren Plattformen und datenschutzfreundlichen Alternativen, sowie Migrationsanleitungen, die Unternehmen helfen ihre Abhängigkeiten von proprietären Lösungen zu reduzieren.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## Selbst mitmachen
+Wir freuen uns über neue Beiträge aus unserer Community! Gerne
 
 ## Project layout
 
