@@ -1,11 +1,25 @@
 site_name: Wiki
 site_url: https://wiki.digital-sovereignty.help/
+repo_url: https://github.com/digital-sovereignty/wiki
+repo_name: digital-sovereignty/wiki
+edit_uri: edit/main/docs/
+
+nav:
+  - Home:
+    - index.md
+  - Wiki:
+    - wiki/index.md
+  - Blog:
+    - blog/index.md
+
 theme:
   name: material
   font: false # Prevents fonts being loaded from Google Fonts
   language: de
   logo: assets/logo_full_white.svg
   favicon: assets/favicon.png
+  icon:
+    repo: fontawesome/brands/github
   palette:
     # Automatic appearance
     # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#automatic-light-dark-mode
@@ -27,6 +41,31 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#instant-loading
+    - navigation.instant 
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#anchor-tracking
+    - navigation.tracking
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
+    - navigation.tabs
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-sections
+    - navigation.sections
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-expansion
+    - navigation.expand
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-path
+    - navigation.path
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#back-to-top-button
+    - navigation.top
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-suggestions
+    - search.suggest
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-highlighting
+    - search.highlight
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#search-sharing
+    - search.share
+    # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
+    - content.action.edit
+    - content.action.view
+      
 
 
 markdown_extensions:
@@ -50,8 +89,18 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
+  # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/#built-in-search-plugin
+  - search
   # Host external assets locally 
   # https://squidfunk.github.io/mkdocs-material/plugins/privacy/
   - privacy
   # https://squidfunk.github.io/mkdocs-material/plugins/optimize/
   # - optimize
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates
+  - git-revision-date-localized:
+      enable_creation_date: true
+  # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-contributors
+  - git-committers:
+      repository: digital-sovereignty/wiki
+      branch: main
+  - blog
