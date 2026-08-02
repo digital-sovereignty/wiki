@@ -104,3 +104,12 @@ plugins:
       repository: digital-sovereignty/wiki
       branch: main
   - blog
+
+extra:
+  social:
+    - icon: fontawesome/solid/info
+      link: https://digital-sovereignty.help/impressum/
+      name: Impressum
+    - icon: fontawesome/solid/user-shield
+      link: https://digital-sovereignty.help/datenschutz/
+      name: Datenschutzerklärung
